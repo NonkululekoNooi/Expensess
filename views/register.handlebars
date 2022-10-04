@@ -1,0 +1,25 @@
+
+ <a href="/">
+      <button class="home" type=""> CLICK HERE TO LOGIN </button>
+
+    </a>
+<form action="/registered" method="post">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in your name and click register to get the code</p>
+    <hr>
+
+    <label for="data"><b>Name</b></label>
+    <input type="text"  name="user"  required>
+
+    
+
+  <h3 for="user" class="user">PRESS SUBMIT TO GET YOUR CODE</b></h3>
+ <input type="submit">   
+
+
+ <h4 class="error"> {{messages.error}}</h4>
+  <h3 class="success"> {{messages.success}}</h3>
+
+</form>
+

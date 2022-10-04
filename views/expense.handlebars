@@ -1,0 +1,72 @@
+
+    
+
+ <a href="/">
+      <button class="home" type=""> HOME </button>
+
+    </a>
+
+
+<form action="/categories/{{name}}" method="post">
+
+
+
+  <div class="please">
+            <h2>Please select category</h2>
+        </div>
+
+
+        <div class="Selection">
+            <select name="groups" class="categories" >
+                
+                <option  value="select">PLEASE SELECT </option>
+                <option name="groups" value="communication"> communication</option>
+                <option name="groups" value="toileries">Toileries</option>
+                <option name="groups" value="food">food</option>
+                 <option name="groups" value="travel">travel</option>
+            </select>
+            
+            <div class="amount">
+         <h3>PLEASE INSERT THE AMOUNT</h3>
+</div>
+
+
+    <input type="text" placeholder="Enter Amount" name="amount">
+
+<div class="date">
+      <h3>PLEASE CHOOOSE A DATE</h3>
+
+      </div>
+  <input type="date" id="date" name="date">
+
+            <input type="submit" value="Submit" class="added" />
+        </div>
+
+       
+            
+    <h4 class="error"> {{messages.success}}</h4>
+ <h4 class="error"> {{messages.error}}</h4>
+ 
+
+
+
+  </form>
+ <a href="/costs/{{name}}">
+ <button>
+    expenses 
+</button>
+    </a>
+
+    <form action="/resets">
+        <div class="resetMe">
+        <button class="reset" type="">Reset</button>
+  </div>
+     
+    </form>
+
+    
+
+  
+
+
+
