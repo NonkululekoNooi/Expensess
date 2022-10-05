@@ -67,7 +67,7 @@ app.post("/registered", async function(req, res){
     req.flash("error",`PLEASE TYPE IN THE CORRECT CODE`)
   }
   else if(usernames){
-  const code = uid();
+  // const code = uid();
 await expenses.storedDetails(usernames,code)
 req.flash("success","PLEASE SAVE YOUR CODE" + " " + " : " + " "+code)
 
