@@ -1,16 +1,18 @@
-<form action="/users" method="post">
-<table>
-  <tr>
-    <th>Categories</th>
-    <th>Cost</th>
-    <th>Date</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-</table>
+     <table class="expense" border="1">
+        
 
-</form>
+            <tr>
+                <th>Name</th>
+                <th>category_id</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+            {{#each expenseCatagory}}
+            <tr>
+            <td>{{Names.id}}</td>
+            <td>{{this.category_id}}</td>
+            <td>R{{this.amount}}</td>
+            <td>{{this.dates}}</td>
+            </tr>
+            {{/each}}
+        </table>

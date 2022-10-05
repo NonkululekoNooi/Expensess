@@ -58,12 +58,15 @@ app.get("/", async function(req, res){
 })
 
 app.post("/registered", async function(req, res){
-let usernames = req.body.user
-if(await expenses.userDetails(usernames) !== null){
-
-  req.flash("error",`YOUR NAME IS ALREADY HAVE A CODE`)
-}
-else if(usernames){
+  let usernames = req.body.user
+  const code = uid();
+  if(await expenses.userDetails(usernames) !== null){
+    
+    req.flash("error",'YOUR NAME IS ALREADY HAVE A CODE')
+  }else if(code == null ){
+    req.flash("error",`PLEASE TYPE IN THE CORRECT CODE`)
+  }
+  else if(usernames){
   const code = uid();
 await expenses.storedDetails(usernames,code)
 req.flash("success","PLEASE SAVE YOUR CODE" + " " + " : " + " "+code)
@@ -79,9 +82,6 @@ app.get("/register", async function(req, res){
 
   })
 })
-
-
-
 
 
 
